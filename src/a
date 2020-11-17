@@ -1,0 +1,125 @@
+
+import React, { useState, useEffect} from 'react';
+//import Axios  from 'axios';
+
+
+import './App.css';
+//import { response } from 'express';
+//import { response } from 'express';
+//import { HttpError } from 'http-errors';
+//import { response } from '../../app';
+//import e from 'express';
+// function MyTextInput(props){
+//     function handleChange(event){
+//       if(props.onChange) props.onChange(event)
+//     }
+//     return(
+//       <p>
+//         <input type="email" value={props.value} name={props.name} ref={props.inputRef} onChange={handleChange} />
+//       </p>
+//     )
+// }
+
+
+
+
+function App (props) {
+
+  const [first_name_form, last_name_form, useremail_form] = useState("");
+  const [email_status_form] = '';//useState("all");
+  const our_emails=[];
+  const [use_email, setEmail] = useState([]);
+  //fetchEmail();
+  
+  
+  const handleChange=(e)=>{
+    console.log(e.target.value) ;
+  };
+  
+  useEffect(()=> {
+    fetchEmail();
+  }, [] );
+
+  const fetchEmail = async () =>{
+    
+    await fetch('/emails')
+    .then(response => response.json())
+    .then(use_data => setEmail(use_data));
+  }
+  
+  
+    //const {first_name, last_name, useremail} = this.state
+    //console.log(use_email);
+  return (
+    <div className="App">
+      <h1>Yamin's Email App</h1>
+      
+      <p></p>
+      <div>
+        
+          <form action="/send_email" method="post">
+          Sender's Name<input placeholder="Sender's name..." type="text" name="sender_name" /> 
+          <p></p>
+          Sender's Email<input placeholder="Sender's email..." type="text" name="sender_email"  />
+          <p></p>
+          Receiever's Name<input placeholder="Receiver's name..." type="text" name="receiver_name" /> 
+          <p></p>
+          Receiever's Email(s)<input placeholder="Receiver's Email.." type="text" name="receiver_email" />
+          <p></p>
+          Subject <input placeholder="Subject..." type="text" name="email_subject" /> 
+          <p></p>
+          Message          
+          <textarea name="email_body" />
+          <p></p>
+          Email Status
+          <select onChange={handleChange} name="email_status" value={email_status_form} >          
+          <option value="all">Send one email to all receievers</option>
+          <option value="each">Send one email to each receiever</option>          
+        </select>
+          <p></p>
+          
+          <button name="btn_sendEmail" value ="btn_sendEmail">Send Email</button>
+          
+          </form>
+      </div>
+      <div>
+        <table border="1">
+        <tr>
+          <th>
+            id
+          </th>
+          <th>
+            Sender Name
+          </th>
+          <th>
+            Sender Email
+          </th>
+          <th>
+            Receiever Name
+          </th>
+          <th>
+            Receiever Email
+          </th>
+          <th>
+            Subject
+          </th>
+          <th>
+            Message
+          </th>
+        </tr>
+        {use_email.map(mail =>  
+      <tr>       
+        <td key={mail.id}> {mail.id}</td> <td>{mail.sender_name}</td><td>{mail.sender_email}</td><td>{mail.receiver_name}</td><td>{mail.receiver_email}</td> <td>{mail.email_subject}</td><td>{mail.email_body}</td>      
+      </tr>
+        )}
+      </table>
+      
+      </div>
+    </div>
+  );
+    
+
+
+}
+
+export default App;
