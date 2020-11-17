@@ -81,10 +81,6 @@ function send_email_db(req, res){
       
 
   }
-//   else{
-//     receiver_emails = email_db;
-      
-//   }
 
 
   const email_output = `
