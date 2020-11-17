@@ -18,5 +18,5 @@ con.on('open', function () {
 app.use(express.json());
 app.use(cors());
 app.use('/app', routeUrl);
-
-app.listen(4000, () => console.log('server is running on '));
+const port = process.env.PORT || 4000;
+app.listen(port, () => console.log(`Server is running on ${port}`));
