@@ -91,9 +91,9 @@ class App extends Component{
 
         }
 
-        //var port_post = process.env.PORT || 4000;
+        var port_post = process.env.PORT || 4000;
 
-        axios.post(`https://new-email-app.herokuapp.com/app/save_db`, send_email_db)
+        axios.post(`http://localhost:${port_post}/app/save_db`, send_email_db)
         .then(res => console.log(res.data));
 
         //console.log("sender email"+send_email_db.sender_email);
