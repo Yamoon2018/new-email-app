@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios';
 import send_email_db_func from './send_email_smtp';
-import { logDOM } from '@testing-library/react';
 
 const dotenv  = require('dotenv');
 
