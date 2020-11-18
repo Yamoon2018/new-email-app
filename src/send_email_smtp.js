@@ -56,7 +56,13 @@ module.exports= function send_email_db(req){
         };
         
         mg.messages().send(mailoptions, function (error, body) {
-            console.log(body);
+            if(!error){
+                console.log(body);
+            }
+            else{
+                console.log(error);
+            }
+            
         });
     
         // tranport_email.sendMail(mailoptions, (err, info)=>{
