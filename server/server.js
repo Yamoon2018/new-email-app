@@ -7,16 +7,10 @@ const cors = require('cors');
 
 dotenv.config();
 
-mongoose.connect(process.env.DATABASE_ACCESS, {useNewUrlParser: true, useUnifiedTopology: true });
-const con = mongoose.connection
-
-con.on('open', function () {
-    console.log('MongoDB connected...');
-    
-})
+mongoose.connect(process.env.DATABASE_ACCESS, ()=>console.log('MonogDB connected...'));
 
 app.use(express.json());
 app.use(cors());
 app.use('/app', routeUrl);
 const port = process.env.PORT || 4000;
-app.listen(port, () => console.log(`Server is running on ${port}`));
+app.listen(4000, () => console.log(`Server is running on ${port} `));

@@ -1,0 +1,12 @@
+POST http://localhost:4000/app/save_db
+Content-Type: application/json
+
+{
+    "sender_name":"Yamin",
+    "sender_email":"req.body.sender_email",
+    "receiver_name":"req.body.receiver_name",
+    "receiver_email":"req.body.receiver_email",
+    "email_subject":"req.body.email_subject",
+    "email_body":"req.body.email_body",
+    "email_attachment":"att"
+}
