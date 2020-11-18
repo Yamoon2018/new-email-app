@@ -91,13 +91,13 @@ class App extends Component{
 
         }
 
-        var port = process.env.PORT || 4000;
+        var port_post = process.env.PORT || 4000;
 
-        axios.post(`http://localhost:${port}/app/save_db`, send_email_db)
+        axios.post(`http://localhost:${port_post}/app/save_db`, send_email_db)
         .then(res => console.log(res.data));
 
         //console.log("sender email"+send_email_db.sender_email);
-        send_email_db_func(send_email_db);
+        //send_email_db_func(send_email_db);
 
 
     }
