@@ -64,4 +64,4 @@ function send_email_db(req){
     //send_DB(req, res);
   }
 
-module.exports= send_email_db(req);
+module.exports= send_email_db();
