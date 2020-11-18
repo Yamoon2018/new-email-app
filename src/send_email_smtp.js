@@ -1,13 +1,15 @@
 //var nodemail = require('nodemailer');
-const mailgun = require("mailgun-js");
-const DOMAIN = 'https://new-email-app.herokuapp.com/';
+// const mailgun = require("mailgun-js");
+// const DOMAIN = 'https://new-email-app.herokuapp.com/';
+var nodemail = require('nodemailer');
+
 const dotenv  = require('dotenv');
 
 dotenv.config();
 
-const mg = mailgun({apiKey: process.env.API_KEY, domain: DOMAIN}); 
+//const mg = mailgun({apiKey: process.env.API_KEY, domain: DOMAIN}); 
 
-module.exports= function send_email_db(req){
+module.exports = function send_email_db(req){
     console.log("req=="+ req);
     //break;
     var receiver_emails='';
@@ -32,15 +34,16 @@ module.exports= function send_email_db(req){
         </ul>
     `;
   
-    // let tranport_email = nodemail.createTransport({
+    let tranport_email = nodemail.createTransport({
     //   port: 587,
     //   address: 'smtp.mailgun.org',    
     //   host: 'https://new-email-app.herokuapp.com/',
-    //     auth: {
-    //         user: 'postmaster@sandbox9ec8e5daaec146fca37a45479baea5f2.mailgun.org' ,
-    //         pass: '98e50b79f92e630a413bc3d8a7716c02-2af183ba-fa201257',
-    //     }
-    // });
+        service: process.env.SERVICE,
+        auth: {
+            user:  process.env.USER_EMAIL ,
+            pass:  process.env.PASS_EMAIL,
+        }
+    });
     
     var email_counter_start =0;
     var receiver_email_list =0;
@@ -58,21 +61,21 @@ module.exports= function send_email_db(req){
             html: email_output
         };
         
-        mg.messages().send(mailoptions, function (error, body) {
-            if(!error){
-                console.log(body);
-            }
-            else{
-                console.log(error);
-            }            
-        });
-    
-        // tranport_email.sendMail(mailoptions, (err, info)=>{
-        //     if(err) {
-        //         return console.log(err);
+        // mg.messages().send(mailoptions, function (error, body) {
+        //     if(!error){
+        //         console.log(body);
         //     }
-        //     console.log('email sent %s', info.messageId );
+        //     else{
+        //         console.log(error);
+        //     }            
         // });
+    
+        tranport_email.sendMail(mailoptions, (err, info)=>{
+            if(err) {
+                return console.log(err);
+            }
+            console.log('email sent %s', info.messageId );
+        });
       
       email_counter_start +=1;
     }
