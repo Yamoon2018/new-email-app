@@ -1,4 +1,7 @@
 var nodemail = require('nodemailer');
+// const mailgun = require("mailgun-js");
+// const DOMAIN = 'YOUR_DOMAIN_NAME';
+// const mg = mailgun({apiKey: api_key, domain: DOMAIN}); 
 
 module.exports= function send_email_db(req){
     console.log("req=="+ req);
@@ -28,7 +31,7 @@ module.exports= function send_email_db(req){
     let tranport_email = nodemail.createTransport({
       port: 587,
       address: 'smtp.mailgun.org',    
-      host: 'https://heroku-email-app.herokuapp.com',
+      host: 'https://new-email-app.herokuapp.com/',
         auth: {
             user: 'postmaster@sandbox9ec8e5daaec146fca37a45479baea5f2.mailgun.org' ,
             pass: '98e50b79f92e630a413bc3d8a7716c02-2af183ba-fa201257',
