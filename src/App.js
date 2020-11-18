@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios';
 import send_email_db_func from './send_email_smtp';
+import { logDOM } from '@testing-library/react';
 
 const dotenv  = require('dotenv');
 
@@ -94,7 +95,10 @@ class App extends Component{
         //var port_post = process.env.PORT || 4000;
 
         axios.post('http://localhost:4000/app/save_db', send_email_db)
-        .then(res => console.log(res.data));
+        .then(res => console.log(res.data))
+        .catch(err=>{
+            console.log("saving error = "+err);
+        }) ;
 
         //console.log("sender email"+send_email_db.sender_email);
         //send_email_db_func(send_email_db);
