@@ -3,6 +3,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios';
 import send_email_db_func from './send_email_smtp';
 
+const dotenv  = require('dotenv');
+
+dotenv.config();
 
 class App extends Component{
     constructor(){
@@ -88,7 +91,9 @@ class App extends Component{
 
         }
 
-        axios.post('http://localhost:4000/app/save_db', send_email_db)
+        var port = process.env.PORT || 4000;
+
+        axios.post(`http://localhost:${port}/app/save_db`, send_email_db)
         .then(res => console.log(res.data));
 
         //console.log("sender email"+send_email_db.sender_email);
