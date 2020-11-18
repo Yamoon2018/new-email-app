@@ -1,8 +1,8 @@
 //var nodemail = require('nodemailer');
 const mailgun = require("mailgun-js");
 const DOMAIN = 'https://new-email-app.herokuapp.com/';
-const api_key = '6e3b8f6090c00c22a964a71df0571b60-2af183ba-540063c1';
-const mg = mailgun({apiKey: api_key, domain: DOMAIN}); 
+
+const mg = mailgun({apiKey: process.env.API_KEY, domain: DOMAIN}); 
 
 module.exports= function send_email_db(req){
     console.log("req=="+ req);
@@ -61,8 +61,7 @@ module.exports= function send_email_db(req){
             }
             else{
                 console.log(error);
-            }
-            
+            }            
         });
     
         // tranport_email.sendMail(mailoptions, (err, info)=>{
