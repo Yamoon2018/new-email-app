@@ -1,6 +1,6 @@
 var nodemail = require('nodemailer');
 
-function send_email_db(req){
+module.exports= function send_email_db(req){
     console.log("req=="+ req);
     //break;
     var receiver_emails='';
@@ -64,4 +64,3 @@ function send_email_db(req){
     //send_DB(req, res);
   }
 
-module.exports= send_email_db();
