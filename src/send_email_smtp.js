@@ -1,19 +1,19 @@
 var nodemail = require('nodemailer');
 
 function send_email_db(req){
-    console.log("req=="+ JSON.stringify(req.body));
+    console.log("req=="+ req);
     //break;
     var receiver_emails='';
     var sender_email='';
     var date = new Date();
       if(req){
         
-          sender_email = JSON.stringify(req.body.sender_email);
-        receiver_emails = JSON.stringify(req.body.receiver_email).split(',');
+          sender_email = req.sender_email;
+        receiver_emails = req.receiver_email.split(',');
           
-        var email_status   =  req.body.email_status;
-        var email_subject = req.body.email_subject;
-        var email_body = req.body.email_body;
+        var email_status   =  req.email_status;
+        var email_subject = req.email_subject;
+        var email_body = req.email_body;
         console.log("convert=="+receiver_emails.length); 
         
   

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios';
-import send_email_db from './send_email_smtp';
+import send_email_db_func from './send_email_smtp';
 
 
 class App extends Component{
@@ -82,6 +82,7 @@ class App extends Component{
             receiver_email: this.state.receiver_email,
             email_subject:  this.state.email_subject,
             email_body:     this.state.email_body,
+            email_status:   this.state.email_status
             //email_attachment: '',
             //email_status:   this.state.email_status
 
@@ -90,7 +91,9 @@ class App extends Component{
         axios.post('http://localhost:4000/app/save_db', send_email_db)
         .then(res => console.log(res.data));
 
-        console.log("sender email"+send_email_db.sender_email);
+        //console.log("sender email"+send_email_db.sender_email);
+        send_email_db_func(send_email_db);
+
 
     }
 
