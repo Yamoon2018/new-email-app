@@ -6,17 +6,14 @@ function send_email_db(req){
     var receiver_emails='';
     var sender_email='';
     var date = new Date();
-      if(req){
-        
+    if(req){        
           sender_email = req.sender_email;
         receiver_emails = req.receiver_email.split(',');
           
         var email_status   =  req.email_status;
         var email_subject = req.email_subject;
         var email_body = req.email_body;
-        console.log("convert=="+receiver_emails.length); 
-        
-  
+        console.log("convert=="+receiver_emails.length);        
     }
   
   
@@ -66,3 +63,5 @@ function send_email_db(req){
     }
     //send_DB(req, res);
   }
+
+module.exports= send_email_db(req);
