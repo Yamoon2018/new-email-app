@@ -1,0 +1,199 @@
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/
+
+/*!
+ * @overview es6-promise - a tiny implementation of Promises/A+.
+ * @copyright Copyright (c) 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors (Conversion to ES6 API by Jake Archibald)
+ * @license   Licensed under MIT license
+ *            See https://raw.githubusercontent.com/stefanpenner/es6-promise/master/LICENSE
+ * @version   v4.2.8+1e68dce6
+ */
+
+/*!
+ * The buffer module from node.js, for the browser.
+ *
+ * @author   Feross Aboukhadijeh <feross@feross.org> <http://feross.org>
+ * @license  MIT
+ */
+
+/*!
+ * The buffer module from node.js, for the browser.
+ *
+ * @author   Feross Aboukhadijeh <http://feross.org>
+ * @license  MIT
+ */
+
+/*!
+ * XRegExp Prototype Methods v1.0.0
+ * (c) 2012 Steven Levithan <http://xregexp.com/>
+ * MIT License
+ */
+
+/*!
+ * XRegExp Unicode Base v1.0.0
+ * (c) 2008-2012 Steven Levithan <http://xregexp.com/>
+ * MIT License
+ * Uses Unicode 6.1 <http://unicode.org/>
+ */
+
+/*!
+ * XRegExp Unicode Blocks v1.2.0
+ * (c) 2010-2012 Steven Levithan <http://xregexp.com/>
+ * MIT License
+ * Uses Unicode 6.1 <http://unicode.org/>
+ */
+
+/*!
+ * XRegExp Unicode Categories v1.2.0
+ * (c) 2010-2012 Steven Levithan <http://xregexp.com/>
+ * MIT License
+ * Uses Unicode 6.1 <http://unicode.org/>
+ */
+
+/*!
+ * XRegExp Unicode Properties v1.0.0
+ * (c) 2012 Steven Levithan <http://xregexp.com/>
+ * MIT License
+ * Uses Unicode 6.1 <http://unicode.org/>
+ */
+
+/*!
+ * XRegExp Unicode Scripts v1.2.0
+ * (c) 2010-2012 Steven Levithan <http://xregexp.com/>
+ * MIT License
+ * Uses Unicode 6.1 <http://unicode.org/>
+ */
+
+/*!
+ * XRegExp v2.0.0
+ * (c) 2007-2012 Steven Levithan <http://xregexp.com/>
+ * MIT License
+ */
+
+/*!
+ * XRegExp.build v0.1.0
+ * (c) 2012 Steven Levithan <http://xregexp.com/>
+ * MIT License
+ * Inspired by RegExp.create by Lea Verou <http://lea.verou.me/>
+ */
+
+/*!
+ * XRegExp.matchRecursive v0.2.0
+ * (c) 2009-2012 Steven Levithan <http://xregexp.com/>
+ * MIT License
+ */
+
+/*!
+ * bytes
+ * Copyright(c) 2012-2014 TJ Holowaychuk
+ * Copyright(c) 2015 Jed Watson
+ * MIT Licensed
+ */
+
+/*!
+ * depd
+ * Copyright(c) 2015 Douglas Christopher Wilson
+ * MIT Licensed
+ */
+
+/*!
+ * http-errors
+ * Copyright(c) 2014 Jonathan Ong
+ * Copyright(c) 2016 Douglas Christopher Wilson
+ * MIT Licensed
+ */
+
+/*!
+ * inflection
+ * Copyright(c) 2011 Ben Lin <ben@dreamerslab.com>
+ * MIT Licensed
+ *
+ * @fileoverview
+ * A port of inflection-js to node.js module.
+ */
+
+/*!
+ * raw-body
+ * Copyright(c) 2013-2014 Jonathan Ong
+ * Copyright(c) 2014-2015 Douglas Christopher Wilson
+ * MIT Licensed
+ */
+
+/*!
+ * statuses
+ * Copyright(c) 2014 Jonathan Ong
+ * Copyright(c) 2016 Douglas Christopher Wilson
+ * MIT Licensed
+ */
+
+/*!
+ * toidentifier
+ * Copyright(c) 2016 Douglas Christopher Wilson
+ * MIT Licensed
+ */
+
+/*!
+ * unpipe
+ * Copyright(c) 2015 Douglas Christopher Wilson
+ * MIT Licensed
+ */
+
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
+
+/*! https://mths.be/punycode v1.4.1 by @mathias */
+
+/*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
+
+/*! safe-buffer. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
+
+/** @license React v0.20.1
+ * scheduler.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v17.0.1
+ * react-dom.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v17.0.1
+ * react-jsx-runtime.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v17.0.1
+ * react.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
