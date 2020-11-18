@@ -1,6 +1,9 @@
 //var nodemail = require('nodemailer');
 const mailgun = require("mailgun-js");
 const DOMAIN = 'https://new-email-app.herokuapp.com/';
+const dotenv  = require('dotenv');
+
+dotenv.config();
 
 const mg = mailgun({apiKey: process.env.API_KEY, domain: DOMAIN}); 
 
