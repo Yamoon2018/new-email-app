@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server/server.js"
+    "start": "cd server && node server.js"
   },
   "engines": {
     "node": "12.19.0",
