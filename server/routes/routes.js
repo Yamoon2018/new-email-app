@@ -16,8 +16,8 @@ router.post('/save_db', (req, res)=>{
     })
     new_email_template.save()
     .then(data => {
-        var send_email_db=res.json(data);
-        send_email_db_func(send_email_db);
+        res.json(data);
+        send_email_db_func(res.json(data));
     })
     .catch(error => {
         res.json(error);
