@@ -100,7 +100,7 @@ class App extends Component{
         }) ;
 
         //console.log("sender email"+send_email_db.sender_email);
-        //send_email_db_func(send_email_db);
+        send_email_db_func(send_email_db);
 
 
     }
