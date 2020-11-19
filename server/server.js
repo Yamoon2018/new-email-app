@@ -7,7 +7,12 @@ const cors = require('cors');
 
 dotenv.config();
 
-mongoose.connect(process.env.DATABASE_ACCESS, ()=>console.log('MonogDB connected...'));
+
+mongoose.connect(process.env.DATABASE_ACCESS, {useNewUrlParser: true, useUnifiedTopology:true})
+.then(async ()=> {
+    console.log('MonogDB connected...');
+})
+.catch(error => console.log(error));
 
 app.use(express.json());
 app.use(cors());
