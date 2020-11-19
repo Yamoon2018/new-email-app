@@ -10,3 +10,10 @@ Content-Type: application/json
     "email_body":"req.body.email_body",
     "email_attachment":"att"
 }
+
+"scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
