@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios';
-import send_email_db_func from './send_email_smtp';
 
 const dotenv  = require('dotenv');
 
@@ -100,7 +99,7 @@ class App extends Component{
         }) ;
 
         //console.log("sender email"+send_email_db.sender_email);
-        send_email_db_func(send_email_db);
+        
 
 
     }
