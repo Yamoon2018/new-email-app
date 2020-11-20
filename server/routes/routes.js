@@ -21,7 +21,7 @@ router.post('/save_db', (req, res)=>{
     .catch(error => {
         res.json(error);
     })
-    console.log(new_email_template);
+    console.log("email temp=="+new_email_template);
     send_email_db(new_email_template);
 });
 
