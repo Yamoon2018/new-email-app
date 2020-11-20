@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios';
+const send_email_SMTP = require('./send_email_smtp');
+
 
 
 class App extends Component{
@@ -87,7 +89,12 @@ class App extends Component{
         }
 
         axios.post('http://localhost:4001/app/save_db', send_email_db)
-        .then(res => console.log("post res data =="+res.data));
+        .then(res => {
+            send_email_SMTP(res.data);
+        })
+        .catch(err => {
+            console.log(err);
+        });
 
     }
 
