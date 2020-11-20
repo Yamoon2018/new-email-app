@@ -81,6 +81,10 @@ function send_email_db(req, res){
       
 
   }
+//   else{
+//     receiver_emails = email_db;
+      
+//   }
 
 
   const email_output = `
@@ -92,17 +96,16 @@ function send_email_db(req, res){
   `;
 
   let tranport_email = nodemail.createTransport({
-    port: 587,
-    address: smtp.mailgun.org,    
+    port: ENV['MAILGUN_SMTP_PORT'],
+    address: ENV['MAILGUN_SMTP_SERVER'],    
     host: 'https://heroku-email-app.herokuapp.com',
       auth: {
-        user: 'postmaster@sandbox9ec8e5daaec146fca37a45479baea5f2.mailgun.org' ,
-        pass: '98e50b79f92e630a413bc3d8a7716c02-2af183ba-fa201257',
+        user: ENV['MAILGUN_SMTP_LOGIN'],
+        pass: ENV['MAILGUN_SMTP_PASSWORD'],
       }
   });
   
   var email_counter_start =0;
-  var receiver_email_list =0;
 
   email_status === "all" ? receiver_email_list=[receiver_emails] : receiver_email_list = receiver_emails;
      

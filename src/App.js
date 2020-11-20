@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios';
 
-const dotenv  = require('dotenv');
-
-dotenv.config();
 
 class App extends Component{
     constructor(){
@@ -81,26 +78,16 @@ class App extends Component{
             sender_name:    this.state.sender_name,
             sender_email:   this.state.sender_email,
             receiver_name:  this.state.receiver_name,
-            receiver_email: this.state.receiver_email,
+            receiver_email: this.state.receiver_name,
             email_subject:  this.state.email_subject,
             email_body:     this.state.email_body,
-            email_status:   this.state.email_status
             //email_attachment: '',
             //email_status:   this.state.email_status
 
         }
 
-        //var port_post = process.env.PORT || 4000;
-
-        axios.post('http://localhost:4000/app/save_db', send_email_db)
-        .then(res => console.log(res.data))
-        .catch(err=>{
-            console.log("saving error = "+err);
-        }) ;
-
-        //console.log("sender email"+send_email_db.sender_email);
-        
-
+        axios.post('http://localhost:4001/app/save_db', send_email_db)
+        .then(res => console.log(res.data));
 
     }
 
