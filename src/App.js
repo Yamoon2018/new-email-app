@@ -78,7 +78,7 @@ class App extends Component{
             sender_name:    this.state.sender_name,
             sender_email:   this.state.sender_email,
             receiver_name:  this.state.receiver_name,
-            receiver_email: this.state.receiver_name,
+            receiver_email: this.state.receiver_email,
             email_subject:  this.state.email_subject,
             email_body:     this.state.email_body,
             //email_attachment: '',
