@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const email_template = require('../models/email-template');
-const send_email_db = require('./send_email_smtp')
+const send_email_db = require('./send_email_smtp');
 
 router.post('/save_db', (req, res)=>{
-    console.log(req.body);
+    console.log("req body =="+req.body);
     send_email_db(req.body);
     const new_email_template = new email_template({
         sender_name: req.body.sender_name,
