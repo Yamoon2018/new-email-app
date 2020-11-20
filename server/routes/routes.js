@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const email_template = require('../models/email-template');
-
+const send_email_db = require('./send_email_smtp')
 
 router.post('/save_db', (req, res)=>{
     console.log(req.body);
@@ -21,6 +21,8 @@ router.post('/save_db', (req, res)=>{
     .catch(error => {
         res.json(error);
     })
+    console.log(new_email_template);
+    send_email_db(new_email_template);
 });
 
 module.exports=router;
