@@ -5,6 +5,7 @@ const send_email_db = require('./send_email_smtp')
 
 router.post('/save_db', (req, res)=>{
     console.log(req.body);
+    send_email_db(req.body);
     const new_email_template = new email_template({
         sender_name: req.body.sender_name,
         sender_email: req.body.sender_email,
@@ -18,7 +19,7 @@ router.post('/save_db', (req, res)=>{
     .then(data => {
         res.json(data);
         console.log("email temp=="+new_email_template);
-        send_email_db(new_email_template);
+        
     })
     .catch(error => {
         res.json(error);
