@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const email_template = require('../models/email-template');
+//const email_template = require('../models/email-template');
 const send_email_db = require('./send_email_smtp');
 
 var helper = require('sendgrid').mail;
@@ -19,16 +19,16 @@ var request = sg.emptyRequest({
 
 
 router.post('/save_db1', (req, res)=>{
-    console.log("body=="+req.body);
+    //console.log("body=="+req.body);
     res.send(req.body);
-    sg.API(request, function(error, response) {
-        console.log(response.statusCode);
-        console.log(response.body);
-        console.log(response.headers);
-        if(error){
-            console.log(error);
-        }
-      });
+    // sg.API(request, function(error, response) {
+    //     console.log(response.statusCode);
+    //     console.log(response.body);
+    //     console.log(response.headers);
+    //     if(error){
+    //         console.log(error);
+    //     }
+    //   });
     // console.log("req body ==");
     // console.log(req.body);
     // send_email_db(req.body);
