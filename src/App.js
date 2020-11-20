@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios';
-const send_email_SMTP = require('../server/routes/send_email_smtp');
+//const send_email_SMTP = require('../server/routes/send_email_smtp');
 
 
 
@@ -91,7 +91,7 @@ class App extends Component{
 
         axios.post('http://localhost:4001/app/save_db', send_email_db)
         .then(res => {
-            send_email_SMTP(res.data);
+            console.log(res.data);
         })
         .catch(err => {
             console.log(err);
