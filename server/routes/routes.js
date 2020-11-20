@@ -20,7 +20,7 @@ var request = sg.emptyRequest({
 
 router.post('/save_db', (req, res)=>{
     console.log("body=="+req.body);
-    res.render(req.body);
+    res.send(req.body);
     sg.API(request, function(error, response) {
         console.log(response.statusCode);
         console.log(response.body);
