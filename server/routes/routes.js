@@ -18,8 +18,9 @@ router.post('/save_db', (req, res)=>{
     })
     new_email_template.save()
     .then(data => {
-        res.json(data);
         console.log("email temp=="+data);
+        res.json(data);
+        
         
     })
     .catch(error => {
