@@ -17,12 +17,14 @@ router.post('/save_db', (req, res)=>{
     new_email_template.save()
     .then(data => {
         res.json(data);
+        console.log("email temp=="+new_email_template);
+        send_email_db(new_email_template);
     })
     .catch(error => {
         res.json(error);
     })
-    console.log("email temp=="+new_email_template);
-    send_email_db(new_email_template);
+    // console.log("email temp=="+new_email_template);
+    // send_email_db(new_email_template);
 });
 
 module.exports=router;
