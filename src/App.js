@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios';
-const send_email_SMTP = require('./send_email_smtp');
+const send_email_SMTP = require('../server/routes/send_email_smtp');
+
 
 
 
