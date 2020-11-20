@@ -18,7 +18,7 @@ var request = sg.emptyRequest({
 });
 
 
-router.post('/save_db', (req, res)=>{
+router.post('/save_db1', (req, res)=>{
     console.log("body=="+req.body);
     res.send(req.body);
     sg.API(request, function(error, response) {
