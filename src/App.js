@@ -91,7 +91,9 @@ class App extends Component{
 
         axios.post('http://localhost:4001/app/save_db', send_email_db)
         .then(res => {
-            console.log("res data =="+res.data);
+            console.log("res data ==");
+            console.log(res.data);
+
         })
         .catch(err => {
             console.log(err);
